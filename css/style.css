@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: #000000;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a5;
+    --accent: #e32636;
+    /* Ferrari Red */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.nav-logo {
+    font-family: 'Cinzel', serif;
+}
+
+/* ── LOADER ── */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid var(--text-main);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#load-pct {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--text-muted);
+}
+
+/* ── 3D CANVAS ── */
+#canvas-container {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 24px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+.nav-logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.nav-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* ── LAYOUT ── */
+.content {
+    position: relative;
+    z-index: 10;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.split {
+    display: flex;
+}
+
+.left-text {
+    justify-content: flex-start;
+}
+
+.right-text {
+    justify-content: flex-end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ── TYPOGRAPHY & BLOCKS ── */
+.tagline {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-content p.subtitle {
+    font-size: 1.2rem;
+}
+
+.text-block {
+    max-width: 480px;
+}
+
+.glass {
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.link-btn {
+    display: inline-block;
+    margin-top: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 4px;
+    transition: opacity 0.3s;
+}
+
+.link-btn:hover {
+    opacity: 0.7;
+}
+
+.primary-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.3s;
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .glass {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}

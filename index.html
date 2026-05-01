@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON VELOCITY | Premium 3D Experience</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Import Map for Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXX');
+</script>
+
+    <!-- 3D Canvas Background -->
+    <div id="canvas-container"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p id="load-pct">LOADING 0%</p>
+    </div>
+
+    <audio id="engine-audio" loop preload="auto" src="assets/sound/astonmartinvantagev12-ferrari-california-30-engine-start-stop-360520.mp3" style="display:none"></audio>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">FERRARI</div>
+        <button class="nav-btn">DISCOVER MORE</button>
+    </nav>
+
+    <!-- Content Sections -->
+    <main class="content">
+
+        <!-- SECTION 1: Hero -->
+        <section class="section" id="sec1">
+            <div class="container hero-content">
+                <div class="fade-in">
+                    <p class="tagline">THE PRANCING HORSE</p>
+                    <h1>FERRARI </h1>
+                    <p class="subtitle">A symphony of speed and Italian craftsmanship. Born on the track, built for the road.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Text Right, Car Left -->
+        <section class="section" id="sec2">
+            <div class="container split right-text">
+                <div class="text-block glass">
+                    <h2>SCULPTED IN MARANELLO</h2>
+                    <p>Aerodynamic perfection achieved in the wind tunnel. Every curve generates maximum downforce while maintaining the timeless and aggressive Ferrari silhouette.</p>
+                    <a href="#" class="link-btn">Explore Design</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Text Left, Car Right -->
+        <section class="section" id="sec3">
+            <div class="container split left-text">
+                <div class="text-block glass">
+                    <h2>HEART OF A CHAMPION</h2>
+                    <p>The legendary mid-rear V8 powertrain delivers an adrenaline-inducing roar. Unbridled power and pure emotion at 8,000 RPM.</p>
+                    <a href="#" class="link-btn">Hear the Roar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Center Text, Car Rear -->
+        <section class="section" id="sec4">
+            <div class="container center-text">
+                <div class="text-block glass text-center">
+                    <h2>UNCOMPROMISING LUXURY</h2>
+                    <p>A cockpit designed for the absolute driver. Racing heritage meets hand-stitched Italian leather and pure carbon fiber.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Footer -->
+        <section class="section footer" id="sec5">
+            <div class="container center-text">
+                <h2>EMBRACE THE PASSION</h2>
+                <p>Join the legacy of Scuderia Ferrari.</p>
+                <button class="primary-btn mt-4">BUILD YOUR OWN</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Main Logic -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
