@@ -1,3 +1,4 @@
+/* global gsap, ScrollTrigger */
 import { scene, camera, carGroup, renderer, initThreeJS, setSmoking } from './carScene.js';
 
 // Audio Context variables
@@ -67,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'canvas-container',
         (xhr) => {
             if (xhr.total) {
-                const pct = Math.round((xhr.loaded / xhr.total) * 100);
+                const pct = Math.min(100, Math.round((xhr.loaded / xhr.total) * 100));
                 loadPctEl.innerText = `LOADING ${pct}%`;
             }
         },
